@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Rock, Paper, Scissors</h2>
+
+<p>The classic game in graphics</p>
+
+<p><img src="rock.png" alt="Rock" onclick="rock()"> &nbsp
+   <img src="paper.png" alt="Paper" onclick="paper()"> &nbsp
+   <img src="scissors.png" alt="Scissors" onclick="scissors()"></p>
+
+<p id="choice">Please pick one: </p>
+
+<p id="opponent"></p>
+
+<script>
+
+function rock() {
+  document.getElementById("choice").innerHTML = "You have chosen <b>ROCK</b>";
+  opponent();
+}
+
+function paper() {
+  document.getElementById("choice").innerHTML = "You have chosen <b>PAPER</b>";
+  opponent();  
+}
+
+function scissors() {
+  document.getElementById("choice").innerHTML = "You have chosen <b>SCISSORS</b>";
+  opponent();
+}
+function opponent() {
+var choices = ["ROCK", "PAPER", "SCISSORS"];
+//  document.getElementById("opponent").innerHTML = choices[Math.floor(Math.random() * 3 )];
+//  document.getElementById("opponent").innerHTML = "The computer chose ???";
+  document.getElementById("opponent").innerHTML = "The computer choose <b>" + choices[Math.floor(Math.random() * 3 )] + "</b>";
+
+}  
+  
+</script>
+
+</body>
+</html>
